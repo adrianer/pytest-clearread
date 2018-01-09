@@ -1,29 +1,25 @@
-# pytest-easyread
+# pytest-clearread
 
 This is a pytest plugin that aims to make the way pytest reports to terminal easier to read.
 
 ### Requirements
 
-You will need the following prerequisites in order to use pytest-easyread:  
+You will need the following prerequisites in order to use pytest-clearread:  
 
-Python (tested on versions 2.7 and 3.4)
-pytest 3.0.4 or newer  
+Python (tested on versions 2.7 and 3.5)
+pytest 3.3.2 or newer  
 
 
 ### Installation
 
-To install pytest-easyread:  
+To install pytest-clearread:  
 
 ```
-$ pip install pytest-easyread
+$ pip install https://github.com/adrianer/pytest-clearread/archive/master.zip
 ```
 
-Then add --easy flag when you run the tests, like this:
+Then add --clear flag when you run the tests, like this:
 ```
-$ pytest --easy
+$ pytest --clear
  ```
 
- ### Ideal use
-
- - pytest-easyread is optimised for use with tests names that use underscores, like "test_this_feature_works"  
- - For now pytest-easyread is set to verbose mode only  
