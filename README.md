@@ -6,7 +6,7 @@ This is a pytest plugin that aims to make the way pytest reports to terminal eas
 
 You will need the following prerequisites in order to use pytest-clearread:  
 
-Python (tested on versions 2.7 and 3.5)
+Python (tested on version 3.5)
 pytest 3.3.2 or newer  
 
 
