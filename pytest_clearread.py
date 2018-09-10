@@ -1,3 +1,4 @@
+import os
 import pytest
 from _pytest.terminal import TerminalReporter
 
@@ -26,6 +27,12 @@ def pytest_configure(config):
         config.pluginmanager.register(clear_reporter, 'terminalreporter')
 
 
+@pytest.mark.tryfirst
+def pytest_runtest_teardown(item, nextitem):
+    # This fixes py.test writing stuff after the progress indication
+    print('')
+
+
 class ClearTerminalReporter(TerminalReporter):
     def __init__(self, reporter):
         TerminalReporter.__init__(self, reporter.config)
@@ -40,7 +47,3 @@ class ClearTerminalReporter(TerminalReporter):
         elif self.showfspath:
             fsid = nodeid.split("::")[0]
             self.write_fspath_result(fsid, "")
-
-    def pytest_runtest_logreport(self, report):
-        TerminalReporter.pytest_runtest_logreport(self, report)
-        print("")
