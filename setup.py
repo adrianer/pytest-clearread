@@ -4,7 +4,7 @@ setup(
     name='pytest-clearread',
     description='pytest plugin that makes terminal printouts of the reports easier to read based on pytest-easyread',
     long_description=open("README.md").read(),
-    version='0.0.3',
+    version='0.0.4',
     url='https://github.com/adrianer/pytest-clearread',
     download_url='https://github.com/adrianer/pytest-clearread/archive/0.1.tar.gz',
     license='BSD',
