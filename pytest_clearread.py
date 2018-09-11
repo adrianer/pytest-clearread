@@ -1,4 +1,3 @@
-import os
 import pytest
 from _pytest.terminal import TerminalReporter
 
@@ -30,7 +29,7 @@ def pytest_configure(config):
 @pytest.mark.tryfirst
 def pytest_runtest_teardown(item, nextitem):
     # This fixes py.test writing stuff after the progress indication
-    print('')
+    print('\n')
 
 
 class ClearTerminalReporter(TerminalReporter):
